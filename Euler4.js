@@ -1,12 +1,9 @@
 //Euler4
 let isPalindrome=function(n){
 	let na=n.toString()
-	for(let i=0;i<=na.length/2;i++){
-		if(na.charAt(i)!=na.charAt(na.length-1-i)){
-			return false
-		}
-	}
-	return true
+	let nar=na.split('').reverse().join('')
+	if(na==nar) return true
+	return false
 }
 
 let e4=function(n){
@@ -21,6 +18,7 @@ let e4=function(n){
 	}
 	return res
 }
+
 
 console.log(e4(999))
 
